@@ -1,0 +1,24 @@
+{
+  "name": "challenge-prework-backend-node",
+  "version": "1.0.0",
+  "description": "Reto: Backend en Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/platzimaster/challenge-prework-backend-node.git"
+  },
+  "keywords": [],
+  "author": "Oscar Barajas <oscar@platzi.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/platzimaster/challenge-prework-backend-node/issues"
+  },
+  "homepage": "https://github.com/platzimaster/challenge-prework-backend-node#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
