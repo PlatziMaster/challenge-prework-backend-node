@@ -40,9 +40,7 @@ npm run start
 Debes de crear un "Fork" de este proyecto, revolver los problemas y crear un Pull Request hacia este repositorio.
 
 ### Contribuir
-Si alguien quiere agregar o mejorar algo, lo invito a colaborar directamente en este repositorio: [challenge-prework-backend-node
-](https://github.com/platzimaster/challenge-prework-backend-node
-/)
+Si alguien quiere agregar o mejorar algo, lo invito a colaborar directamente en este repositorio: [challenge-prework-backend-node](https://github.com/platzimaster/challenge-prework-backend-node/)
 
 ### Licencia
 challenge-prework-backend-node se lanza bajo la licencia [MIT](https://opensource.org/licenses/MIT).
