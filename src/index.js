@@ -1,3 +1,6 @@
+require('dotenv').config()
+
+const Controlloer = require('../src/assets/controller')
 const express = require("express"),
   path = require("path"),
   app = express(),
@@ -9,12 +12,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/receipts', (req, res) => {
-  let file = path.join(__dirname, "asset/receipt.pdf");
-  res.sendFile();
+  let file = path.join(__dirname, "assets/receipt.pdf");
+  console.log(file);
+  res.sendFile(file);
 });
 
 app.get('/products', (req, res) => {
-  let storeProducts = '';
+  let storeProducts = Controlloer.list();
   res.json(storeProducts);
 });
 
