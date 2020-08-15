@@ -1,27 +1,29 @@
-const express = require("express"),
-  path = require("path"),
-  app = express(),
-  port = process.env.PORT || 3000;
+'use strict'
 
-app.get('/', (req, res) => {
-  let userInfo = req.header("user-agent");
-  res.send(`UserInfo: ${userInfo}`);
-});
+require('dotenv').config()
 
-app.get('/receipts', (req, res) => {
-  let file = path.join(__dirname, "asset/receipt.pdf");
-  res.sendFile();
-});
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 3000
 
-app.get('/products', (req, res) => {
-  let storeProducts = '';
-  res.json(storeProducts);
-});
+// parse json and urlencoded from to body
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
-app.listen(port, err => {
+// import routes pages
+app.use('/', require('./routes/home'))
+app.use('/receipts', require('./routes/receipts'))
+app.use('/products', require('./routes/products'))
+
+app.use('/', (req, res) => {
+  res.status(404).send('Not Found')
+})
+
+// initialize server on port
+app.listen(port, (err) => {
   if (err) {
-    console.error("Error: ", err);
-    return;
+    console.error('Error: ', err)
+    return
   }
-  console.log(`Listening http://localhost:${port}`);
-});
+  console.log(`Listening http://localhost:${port}`)
+})
