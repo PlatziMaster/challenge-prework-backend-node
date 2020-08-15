@@ -8,7 +8,7 @@ Ahora que tenemos Platzi Store funcionando, debemos crear el Backend que necesit
 
 ### Instalación
 ```
-npm install
+npm install ok
 ```
 
 ### Ejecución
