@@ -8,7 +8,6 @@ const productsService = new ProductsService()
 
 // the products route
 router.get('/', (req, res) => {
-  console.log('ingreso')
   let storeProducts = productsService.getProducts()
   let message = 'list of products'
   res.json({
