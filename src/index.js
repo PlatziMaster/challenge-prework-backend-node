@@ -1,13 +1,14 @@
-const express = require("express"),
+require('dotenv').config();
+const express = require('express'),
   path = require("path"),
   fetch = require('node-fetch'),
   app = express(),
   port = process.env.PORT || 3000;
-
   app.get('/', (req, res) => {
-  let userInfo = req.header("user-agent");
+
+  let userInfo = req.header('user-agent');
   res.send(`UserInfo: ${userInfo}`);
-});
+});x
 
 app.get('/receipts', (req, res) => {
   let file = path.join(__dirname, "assets/receipt.pdf");
@@ -28,7 +29,7 @@ app.get('/products', async (req, res) => {
 
 app.listen(port, err => {
   if (err) {
-    console.error("Error: ", err);
+    console.error('Error: ', err);
     return;
   }
   console.log(`Listening http://localhost:${port}`);
