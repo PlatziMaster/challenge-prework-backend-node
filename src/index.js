@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/receipts', (req, res) => {
-  let file = path.join(__dirname, "asset/receipt.pdf");
+  let file = path.join(__dirname, "./asset/receipt.pdf");
   res.sendFile();
 });
 
