@@ -8,19 +8,20 @@ Ahora que tenemos Platzi Store funcionando, debemos crear el Backend que necesit
 
 ### Instalación
 ```
-npm install
+npm install 'Instalado'
+npm install -g nodemon
 ```
 
 ### Ejecución
 ```
-npm run start
+npm run start 'OK Ejecutando Servidor por lotes'
 ```
 
 ## RETO
 
 ### Primer problema
 
-1) Crea el archivo .env en tu entorno local y añade la configuración necesaria.
+1) Crea el archivo .env en tu entorno local y añade la configuración necesaria. 
 2) Instala el paquete 'nodemon' para crear un monitor de tu aplicación.
 3) Crea un script llamado 'watch' en tu archivo 'package.json' que ejecute nodemon.
 
