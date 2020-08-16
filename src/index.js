@@ -1,7 +1,10 @@
+const { config } = require('../config/index')
+const { productsMock } = require('../mocks/productsMock')
+
 const express = require("express"),
   path = require("path"),
   app = express(),
-  port = process.env.PORT || 3000;
+  port = process.env.PORT;
 
 app.get('/', (req, res) => {
   let userInfo = req.header("user-agent");
@@ -9,13 +12,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/receipts', (req, res) => {
-  let file = path.join(__dirname, "asset/receipt.pdf");
-  res.sendFile();
+  let file = path.join(__dirname, "assets/receipt.pdf");
+  res.sendFile(file);
 });
 
 app.get('/products', (req, res) => {
-  let storeProducts = '';
-  res.json(storeProducts);
+  res.json({ productsMock });
 });
 
 app.listen(port, err => {
@@ -23,5 +25,5 @@ app.listen(port, err => {
     console.error("Error: ", err);
     return;
   }
-  console.log(`Listening http://localhost:${port}`);
+  console.log(`Listening http://localhost:${config.port}`);
 });
