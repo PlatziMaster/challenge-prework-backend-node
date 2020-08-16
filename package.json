@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon src",
     "start": "node src/index.js"
   },
   "repository": {
@@ -20,5 +21,8 @@
   "homepage": "https://github.com/platzimaster/challenge-prework-backend-node#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
