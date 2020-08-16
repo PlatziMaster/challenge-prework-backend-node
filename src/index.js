@@ -3,20 +3,7 @@ const express = require("express"),
   app = express(),
   port = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-  let userInfo = req.header("user-agent");
-  res.send(`UserInfo: ${userInfo}`);
-});
-
-app.get('/receipts', (req, res) => {
-  let file = path.join(__dirname, "assets/receipt.pdf");
-  res.sendFile(file);
-});
-
-app.get('/products', (req, res) => {
-  let storeProducts = '';
-  res.json(storeProducts);
-});
+app.use(require('./routes/index.routes'));
 
 app.listen(port, err => {
   if (err) {
