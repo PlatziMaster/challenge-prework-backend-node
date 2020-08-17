@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "3f587c4b-9996-47f9-a08f-4ceab195b3bc",
+		"name": "Platsi Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ListarProductos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://672d20c0-f588-4d3a-ac9f-697f68429121.mock.pstmn.io/productos",
+					"protocol": "https",
+					"host": [
+						"672d20c0-f588-4d3a-ac9f-697f68429121",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ListarProductos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "api.platziStore/productos",
+							"host": [
+								"api",
+								"platziStore"
+							],
+							"path": [
+								"productos"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "[\r\n    {\r\n        \"nombre\": \"Playera\",\r\n        \"precio\": 12.5,\r\n        \"disponivilidad\": 100\r\n    },\r\n    {\r\n        \"nombre\": \"Termo\",\r\n        \"precio\": 20,\r\n        \"disponivilidad\": 100\r\n    },\r\n    {\r\n        \"nombre\": \"Sudareda\",\r\n        \"precio\": 17.6,\r\n        \"disponivilidad\": 100\r\n    },\r\n    {\r\n        \"nombre\": \"Pin\",\r\n        \"precio\": 1.5,\r\n        \"disponivilidad\": 100\r\n    },\r\n    {\r\n        \"nombre\": \"Mochila\",\r\n        \"precio\": 50,\r\n        \"disponivilidad\": 100\r\n    },\r\n    {\r\n        \"nombre\": \"Microfono de Fredy\",\r\n        \"precio\": 3999,\r\n        \"disponivilidad\": 1\r\n    }\r\n    \r\n]"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
