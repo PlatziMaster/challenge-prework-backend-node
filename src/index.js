@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
   res.send(`UserInfo: ${userInfo}`);
 });
 
-app.get('/receipts', (req, res) => {
+app.get('/assets', (req, res) => {
   let file = path.join(__dirname, "asset/receipt.pdf");
   res.sendFile();
 });
@@ -25,3 +25,5 @@ app.listen(port, err => {
   }
   console.log(`Listening http://localhost:${port}`);
 });
+const storeApi = require('../routes/store.js');
+storeApi(app);
