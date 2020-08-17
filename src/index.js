@@ -1,7 +1,10 @@
+require('dotenv').config()
+
 const express = require("express"),
   path = require("path"),
   app = express(),
   port = process.env.PORT || 3000;
+
 
 app.get('/', (req, res) => {
   let userInfo = req.header("user-agent");
