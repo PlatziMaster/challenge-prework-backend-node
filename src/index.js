@@ -12,8 +12,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/receipts', (req, res) => {
-  let file = path.join(__dirname, "asset/receipt.pdf");
-  res.sendFile();
+  // res.send({
+  //   hola: 'mundo'
+  // })
+  let file = path.join(__dirname, "assets/receipt.pdf");
+  res.setHeader('Content-Type', 'application/pdf');
+  res.sendFile(file);
 });
 
 app.get('/products', (req, res) => {
