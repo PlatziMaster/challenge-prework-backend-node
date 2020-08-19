@@ -1,5 +1,6 @@
 const dotenv = require('dotenv').config();
-const productsApi = require('./products');
+const productsApi = require('./products/products_data');
+
 const express = require("express"),
   path = require("path"),
   app = express(),
@@ -16,7 +17,7 @@ app.get('/receipts', (req, res) => {
 });
 
 app.get('/products', (req, res) => {
-  let storeProducts ='';
+  let storeProducts =productsApi;
   res.json(storeProducts);
 }); 
 
