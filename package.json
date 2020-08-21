@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
-    "watch": "nodemon ./src/index.js",
-    "start:dev": "node src/server/server.js"
+    "watch": "nodemon src/server/index.js",
+    "start:dev": "node src/server/index.js"
   },
   "repository": {
     "type": "git",
